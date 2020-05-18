@@ -34,7 +34,7 @@ function seek_password(hash) {
 	var alphabet = lower.concat(upper).concat(number).concat(punctuation);
 	// try to generate password
 	for (var i = 0; i <= hash.length - 10; ++i) {
-		var sub_hash = hash.slice(i, i + 10).split("");
+		var sub_hash = hash.slice(i, i + 12).split("");
 		var count = 0;
 		var map_index = sub_hash.map(function(c) {
 			count = (count + c.charCodeAt()) % alphabet.length;
